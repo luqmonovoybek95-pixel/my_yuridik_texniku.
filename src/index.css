@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Custom Scrollbar for desktop data tables */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Touch screen improvements */
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* 46. KUNDUZGI VA TUNGI REJIM (DARK MODE) */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0b0f19;
+  color: #f1f5f9;
+}
+
+html.dark .bg-white {
+  background-color: #111827 !important;
+  color: #f8fafc;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #1e293b !important;
+  color: #f1f5f9;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #1e293b !important;
+}
+
+html.dark .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+html.dark .border-slate-100 {
+  border-color: #1e293b !important;
+}
+
+html.dark .border-slate-300 {
+  border-color: #475569 !important;
+}
+
+html.dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-800 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+html.dark input:not([type="checkbox"]):not([type="radio"]),
+html.dark select,
+html.dark textarea {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+html.dark .custom-scrollbar::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+html.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+/* 48. FOYDALANUVCHI UCHUN SHRIFT O‘LCHAMI SOZLAMALARI */
+html[data-font-size="small"] {
+  font-size: 14px !important;
+}
+
+html[data-font-size="medium"] {
+  font-size: 16px !important;
+}
+
+html[data-font-size="large"] {
+  font-size: 18px !important;
+}
+
+html[data-font-size="xlarge"] {
+  font-size: 20px !important;
+}
+
+/* Print Styles for official HEMIS documents & A4 timetable */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Hide UI elements during print */
+  nav,
+  aside,
+  header,
+  .no-print,
+  button:not(.allow-print),
+  .modal-backdrop,
+  .mobile-bottom-nav,
+  .quick-actions,
+  .notification-bell {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .main-content-area {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Timetable specific print formatting */
+  .official-timetable-print {
+    box-shadow: none !important;
+    border: 2px solid black !important;
+    width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  .official-timetable-print table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  .official-timetable-print th,
+  .official-timetable-print td {
+    border: 1.5px solid black !important;
+    padding: 5px 6px !important;
+    font-size: 11pt !important;
+    color: black !important;
+  }
+
+  .official-timetable-print .print-header-bg {
+    background-color: #ffc000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .official-timetable-print .print-red-bg {
+    background-color: #ff0000 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .official-timetable-print .print-green-bg {
+    background-color: #00b050 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .official-timetable-print .print-purple-bg {
+    background-color: #b4a7d6 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="35%" stop-color="#F59E0B"/>
+      <stop offset="70%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+
+    <linearGradient id="blueCore" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <linearGradient id="goldFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+
+    <!-- Circular path for text -->
+    <path id="textCircleTop" d="M 75,250 A 175,175 0 1,1 425,250" fill="none"/>
+    <path id="textCircleBottom" d="M 425,250 A 175,175 0 0,1 75,250" fill="none"/>
+  </defs>
+
+  <!-- Outer Shadow & Background -->
+  <circle cx="250" cy="250" r="240" fill="#0B132B" stroke="url(#goldRing)" stroke-width="8"/>
+  <circle cx="250" cy="250" r="230" fill="none" stroke="#FDE68A" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Outer Navy Blue Text Ring -->
+  <circle cx="250" cy="250" r="218" fill="url(#blueCore)" stroke="url(#goldRing)" stroke-width="5"/>
+
+  <!-- Text: SIRDARYO YURIDIK TEXNIKUMI -->
+  <text fill="#FCD34D" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="24" letter-spacing="4">
+    <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+      SIRDARYO YURIDIK TEXNIKUMI
+    </textPath>
+  </text>
+
+  <!-- Stars & Bottom Text -->
+  <text fill="#FEF08A" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="19" letter-spacing="6">
+    <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+      ★ ELEKTRON TA’LIM TIZIMI ★
+    </textPath>
+  </text>
+
+  <!-- Inner Gold Bezel Ring -->
+  <circle cx="250" cy="250" r="145" fill="none" stroke="url(#goldRing)" stroke-width="6"/>
+  <circle cx="250" cy="250" r="137" fill="#0A1128"/>
+
+  <!-- Subtle Emblem Background Rays -->
+  <g opacity="0.15" stroke="#F59E0B" stroke-width="1.5">
+    <line x1="250" y1="120" x2="250" y2="380"/>
+    <line x1="120" y1="250" x2="380" y2="250"/>
+    <line x1="158" y1="158" x2="342" y2="342"/>
+    <line x1="158" y1="342" x2="342" y2="158"/>
+  </g>
+
+  <!-- Scales of Justice (Adolat Tarozisi) -->
+  <g id="scales" transform="translate(0, -10)">
+    <!-- Central Pillar Spire -->
+    <path d="M 250,150 L 254,165 L 253,300 L 247,300 L 246,165 Z" fill="url(#goldFill)"/>
+    <circle cx="250" cy="148" r="8" fill="#FDE68A" stroke="#B45309" stroke-width="2"/>
+
+    <!-- Pillar Base -->
+    <path d="M 225,300 L 275,300 L 285,312 L 215,312 Z" fill="url(#goldFill)"/>
+
+    <!-- Horizontal Balance Beam -->
+    <path d="M 180,185 Q 250,175 320,185 L 320,191 Q 250,181 180,191 Z" fill="url(#goldFill)"/>
+    <circle cx="250" cy="183" r="5" fill="#FEF08A"/>
+    <circle cx="180" cy="188" r="4" fill="#FEF08A"/>
+    <circle cx="320" cy="188" r="4" fill="#FEF08A"/>
+
+    <!-- Left Pan Strings & Pan -->
+    <line x1="180" y1="190" x2="160" y2="235" stroke="#FDE68A" stroke-width="1.8"/>
+    <line x1="180" y1="190" x2="200" y2="235" stroke="#FDE68A" stroke-width="1.8"/>
+    <path d="M 155,235 C 155,252 205,252 205,235 Z" fill="url(#goldFill)"/>
+
+    <!-- Right Pan Strings & Pan -->
+    <line x1="320" y1="190" x2="300" y2="235" stroke="#FDE68A" stroke-width="1.8"/>
+    <line x1="320" y1="190" x2="340" y2="235" stroke="#FDE68A" stroke-width="1.8"/>
+    <path d="M 295,235 C 295,252 345,252 345,235 Z" fill="url(#goldFill)"/>
+  </g>
+
+  <!-- Open Book of Law (Qonun Kitobi) -->
+  <g id="book" transform="translate(0, 310)">
+    <path d="M 250,12 C 220,2 185,2 165,10 L 165,36 C 185,28 220,28 250,38 C 280,28 315,28 335,36 L 335,10 C 315,2 280,2 250,12 Z" fill="#F8FAFC" stroke="#B45309" stroke-width="2"/>
+    <path d="M 250,12 L 250,38" stroke="#B45309" stroke-width="2"/>
+
+    <!-- Book text lines -->
+    <line x1="180" y1="16" x2="235" y2="20" stroke="#94A3B8" stroke-width="1.5"/>
+    <line x1="180" y1="23" x2="235" y2="27" stroke="#94A3B8" stroke-width="1.5"/>
+    <line x1="265" y1="20" x2="320" y2="16" stroke="#94A3B8" stroke-width="1.5"/>
+    <line x1="265" y1="27" x2="320" y2="23" stroke="#94A3B8" stroke-width="1.5"/>
+  </g>
+
+  <!-- Laurel / Olive Branches at bottom -->
+  <g fill="none" stroke="#F59E0B" stroke-width="3" stroke-linecap="round">
+    <path d="M 175,360 C 210,380 290,380 325,360"/>
+    <circle cx="250" cy="376" r="3" fill="#FCD34D"/>
+  </g>
+</svg>
